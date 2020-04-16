@@ -1,0 +1,79 @@
+$red: red 
+$green: green
+$yellow: yellow
+$silver: silver
+$orange: orange
+$black: black
+$grey: grey
+  
+.navbar
+    background-color: $orange 
+    width: 100%
+    height: 3rem
+    padding: .5rem
+    display: grid
+    grid-template-columns: 1fr 3fr
+    &__logo 
+        background-color: $silver
+        grid-column: 1
+    &__items
+        background-color: $yellow
+        grid-column: 2
+        display: flex
+        justify-content: space-around
+        justify-content: flex-end
+    &__item
+        background-color: $grey
+        width: 3rem
+        border: 2px solid black
+        margin: 0px 5px
+        border-radius: 50%
+        
+.container
+    background-color: $green
+    border: 2px solid blue
+    height: 50rem
+    border-radius: 15px
+    display: flex
+    justify-content: space-around
+    align-items: center
+    &__card 
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        border: 3px solid blue
+        border-radius: 5px
+        width: 25%
+        height: 20rem
+        background-color: $black
+    &__img
+        border: 2px solid white
+        width: 90%
+        height: 40%
+        background: $silver        
+    &__text
+        padding: 10px
+        color: white
+    &__button
+        display: flex
+        justify-content: center
+        align-items: center
+        border: 2px solid white
+        width: 100px
+        height: 25px
+        color: $black 
+        background-color: $silver       
+        &--red
+            background-color: $red     
+        &--valid
+            background-color: $green     
+
+.footer
+    display: flex
+    justify-content: center
+    align-items: center
+    background-color: $red 
+    width: 100%
+    height: 3rem     
+ 
