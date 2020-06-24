@@ -24,16 +24,21 @@ This application allows:
 ## Activities
 
 #### Add Books to your library
+
 ![add-book](./images/add-book.png)
+
 #### Search books
 
 ![search-books](./images/search-book.png)
+
 #### Search users
 
 ![search-user](./images/search-user.png)
+
 #### List messages
 
 ![list-messages](./images/list-messages.png)
+
 #### List favorites
 
 ![list-favorites](./images/list-favorites.png)
@@ -53,7 +58,7 @@ This application allows:
 
 ## Data Model
 
-![](./images/data-model.png)
+![data-model](./images/data-model.png)
 
 ## Code Coverage
 
@@ -77,7 +82,7 @@ Go to module `books-server-logic`
 $ npm test
 ```
 
-#####  Code Coverage
+#### Code Coverage
 
 ```sh
 $ npm run test:coverage

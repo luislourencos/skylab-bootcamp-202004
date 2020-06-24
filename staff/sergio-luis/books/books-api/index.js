@@ -268,7 +268,7 @@ try {
                 const { payload: { sub: userId } , params:{messageId}} = req
 
                 try {
-                    debugger
+        
                     deleteRecievedMessages(userId,messageId)
                         .then(()=>res.status(204).send())
                         .catch(error => handleError(error, res))

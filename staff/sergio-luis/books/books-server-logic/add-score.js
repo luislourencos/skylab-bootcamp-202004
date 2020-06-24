@@ -46,7 +46,7 @@ module.exports = (userId, recievedPointUserId, points) => {
 
         await User.findByIdAndUpdate(recievedPointUserId, { $addToSet: { score } })
 
-        const avgScore = secondUser.score.length === 0 ? points : parseFloat((((secondUser.score.reduce((acc, curr) => {debugger; return acc + curr.points}, points)) / (secondUser.score.length+1)))).toFixed(1)
+        const avgScore = secondUser.score.length === 0 ? points : parseFloat((((secondUser.score.reduce((acc, curr) => {; return acc + curr.points}, points)) / (secondUser.score.length+1)))).toFixed(1)
 
         await User.findByIdAndUpdate(recievedPointUserId, { $set: { avgScore } })
     })()

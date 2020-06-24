@@ -46,7 +46,7 @@ describe("update-user", () => {
         await updateUser(userId,_name,_surname,_email,password)
 
         const user = await User.findById(userId)
-        debugger
+
         expect(user).to.exist
         expect(user.name).to.equal(_name)
         expect(user.surname).to.equal(_surname)

@@ -39,7 +39,7 @@ describe("retrieve-coordinates", () => {
         await User.findByIdAndUpdate(userId, {$set:{gpsCoordinates}})
 
         const coordinates = await retrieveCoodinates(userId)
-debugger
+
         expect(coordinates).to.exist
         expect(coordinates.latitude).to.equal(latitude)
         expect(coordinates.longitude).to.equal(longitude) 

@@ -24,14 +24,13 @@ module.exports = (userId) => {
         const user = await User.findById(userId)
 
         if (!user) throw new UnexistenceError(`user with id ${userId} does not exist`);
-        debugger
+    
         const received = await Message.find({ toUserId: userId })
         .populate('fromUserId', 'name')
         .populate('bookId', 'title image')
         .sort({date:-1})
         .lean()
 
-        debugger
         if(!received.length)throw new UnexistenceError("the user don`t have recieved messages");
         const _received = received.map(message => {
             message.id = message._id.toString();

@@ -41,7 +41,7 @@ module.exports = (userId,name,surname,email,password) => {
 
        if(email) {
            const newEmail = await User.find({email})
-           debugger
+    
             if(newEmail.length!== 0) throw new Error ('this email already exist')
        }
 

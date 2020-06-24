@@ -51,7 +51,7 @@ describe("retrieve-requested-book", () => {
         await User.findByIdAndUpdate(userId, {$push: {requestedBooks : bookId }})
 
         const books = await retrieveRequestedBooks(userId)
-debugger
+
         books.forEach(book=>{
             expect(book).to.exist
             expect(book.id).to.equal(bookId)

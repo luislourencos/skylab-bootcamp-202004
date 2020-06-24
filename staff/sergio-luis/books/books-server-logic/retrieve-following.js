@@ -26,7 +26,7 @@ module.exports = (userId) => {
         if (!user) throw new UnexistenceError(`user with id ${userId} does not exist`);
 
         const followingUsers = await User.find({ followers: userId }).lean();
-        debugger
+
         user.following.leng
         if(!followingUsers.length)throw new UnexistenceError("you don`t have any users following");
         

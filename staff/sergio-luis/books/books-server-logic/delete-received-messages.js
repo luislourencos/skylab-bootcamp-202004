@@ -18,7 +18,7 @@ const { errors: { UnexistenceError ,CredentialsError} } = require('books-commons
 const { models: { User, Message } } = require('books-data')
 
 module.exports = (userId, messageId) => {
-    debugger
+    
     String.validate.notVoid(userId)
     String.validate.notVoid(messageId)
 
